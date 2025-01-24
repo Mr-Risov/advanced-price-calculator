@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <h1>Price & Quantity Calculator</h1>
+    <form id="calculator-form">
+      <!-- Weight Section -->
+      <div class="form-group">
+        <label for="weight">Weight:</label>
+        <div class="input-group">
+          <input type="number" id="weight" placeholder="Enter weight" step="0.01" required>
+          <select id="weight-unit">
+            <option value="kg">kg</option>
+            <option value="grams">g</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Price Section -->
+      <div class="form-group">
+        <label for="price">Price (₹):</label>
+        <input type="number" id="price" placeholder="Enter price (₹)" step="0.01" required>
+      </div>
+
+      <!-- Calculation Type -->
+      <div class="form-group">
+        <label for="calculation-type">Select Calculation:</label>
+        <select id="calculation-type">
+          <option value="price-per-quantity">Calculate Price (₹)</option>
+          <option value="quantity-per-price">Calculate Weight</option>
+        </select>
+      </div>
+
+      <!-- Input Value Section -->
+      <div class="form-group">
+        <label for="input-value">Enter Value:</label>
+        <div class="input-group">
+          <input type="number" id="input-value" placeholder="Enter value" step="0.01" required>
+          <select id="input-unit">
+            <option value="kg">kg</option>
+            <option value="grams">g</option>
+            <option value="price">₹</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Calculate Button -->
+      <button type="button" id="calculate-button">Calculate</button>
+    </form>
+
+    <!-- Output Section -->
+    <div id="result" class="result-box"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+          </html>
+  
